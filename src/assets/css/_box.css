@@ -1,0 +1,17 @@
+@layer components {
+    .box {
+        @apply bg-white dark:bg-darkmode-700 border border-slate-200/60 dark:border-darkmode-500 rounded-lg relative;
+
+        .box-header{
+            @apply border-b border-slate-100 py-4 px-5;
+            &.split{
+                @apply flex justify-between items-center;
+            }
+
+            .bh-title{
+                @apply text-slate-600 font-medium;
+            }
+        }
+
+    }
+}

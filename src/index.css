@@ -1,0 +1,92 @@
+@import "/src/assets/css/_full-calendar.css";
+@import "/src/assets/css/_satoshi.css";
+@import "/src/assets/css/_box.css";
+@import "react-datepicker/dist/react-datepicker.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    body {
+        @apply bg-slate-100 dark:bg-slate-900;
+        font-family: theme("fontFamily.satoshi"), sans-serif;
+    }
+
+    .sub-menu-item {
+        @apply px-4 py-3 text-sm rounded-md text-white flex justify-start items-center gap-2 transition-all ease-in;
+    }
+
+    .sub-menu-item.active {
+        @apply bg-white/10;
+
+        .sum-menu-dot {
+            @apply border border-white;
+        }
+    }
+
+
+    .react-datepicker__month-container {
+        @apply border-none;
+    }
+
+    .react-datepicker__day--in-range {
+        @apply bg-primary text-white;
+    }
+}
+
+.react-datepicker {
+    @apply bg-white dark:bg-slate-900 border-none flex;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.react-datepicker__header {
+    @apply bg-white dark:bg-slate-900 border-none py-5 px-5;
+}
+
+.react-datepicker__current-month {
+    @apply text-slate-500;
+
+}
+
+.react-datepicker__day-names,
+.react-datepicker__day-name {
+    @apply text-slate-500 !important;
+}
+
+.list-pagination-prev {
+    @apply flex justify-center ;
+}
+
+.page-link {
+    @apply flex justify-center items-center px-4 text-slate-500 text-xs hover:bg-primary hover:text-white transition duration-200;
+}
+
+.tab-holder > * {
+    cursor: pointer !important;
+}
+
+/* Texts */
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+label {
+    @apply block text-sm/6 font-medium text-gray-900
+}
+
+input {
+    @apply block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6;
+    border-radius: 7px !important;
+}
+
